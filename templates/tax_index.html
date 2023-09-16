@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<head>
+  <title>Tax question</title>
+  <link
+    rel="shortcut icon"
+    href="{{ url_for('static', filename='tax.png') }}"
+  />
+  <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" />
+</head>
+
+<body>
+  <img src="{{ url_for('static', filename='tax.png') }}" class="icon" />
+  <h3>Enter Tax question</h3>
+  <form action="/tax" method="post">
+    <input type="text" name="question" placeholder="Enter a tax question" required />
+    <input type="submit" value="Answer" />
+  </form>
+  {% if result %}
+  <div class="result">{{ result }}</div>
+  {% endif %}
+</body>
