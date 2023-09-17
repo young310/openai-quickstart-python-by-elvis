@@ -12,7 +12,7 @@
   <img src="{{ url_for('static', filename='accountant.png') }}" class="icon" />
   <h3>Enter accounting question</h3>
   <form action="/acc" method="post">
-    <input type="text" name="question" placeholder="Enter a accounting question" required />
+    <textarea name="question" required></textarea>
     <input type="submit" value="Answer" />
   </form>
   {% if result %}
