@@ -16,6 +16,6 @@
     <input type="submit" value="Answer" />
   </form>
   {% if result %}
-  <div class="result">{{ result }}</div>
+  <div class="result">{{ result|safe }}</div>
   {% endif %}
 </body>
